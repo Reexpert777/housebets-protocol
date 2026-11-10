@@ -7,14 +7,14 @@ import { useSportsbook } from '@/lib/sportsbook/store'
 export function Logo() {
   return (
     <span className="flex items-center gap-2">
-      <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+      <span className="flex size-7 items-center justify-center rounded-lg bg-primary text-primary-foreground sm:size-8">
         <svg viewBox="0 0 24 24" className="size-5" aria-hidden fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 11 12 4l8 7" />
           <path d="M7 10v9h10v-9" />
           <path d="M10.5 19v-4.5h3V19" />
         </svg>
       </span>
-      <span className="text-lg font-bold tracking-tight text-foreground">
+      <span className="text-base font-bold tracking-tight text-foreground sm:text-lg">
         House<span className="text-primary">bets</span>
       </span>
     </span>
@@ -25,7 +25,7 @@ export function TopBar() {
   const { balance, setNavOpen, navigate } = useSportsbook()
 
   return (
-    <header className="sticky top-0 z-40 flex h-14 shrink-0 items-center gap-2 border-b border-border bg-background/90 px-3 backdrop-blur md:gap-3 md:px-4">
+    <header className="sticky top-0 z-40 flex h-14 shrink-0 items-center gap-1.5 border-b border-border bg-background/90 px-2 backdrop-blur sm:px-3 md:gap-3 md:px-4">
       <button
         type="button"
         onClick={() => setNavOpen(true)}
@@ -38,7 +38,7 @@ export function TopBar() {
         <Logo />
       </button>
 
-      <div className="ml-auto flex items-center gap-1.5 md:gap-2">
+      <div className="ml-auto flex items-center gap-1 sm:gap-1.5 md:gap-2">
         <div className="hidden items-center gap-1.5 md:flex">
           <button
             type="button"
@@ -67,7 +67,7 @@ export function TopBar() {
         </button>
 
         <div className="flex h-9 items-center overflow-hidden rounded-lg border border-border bg-surface">
-          <span className="flex items-center gap-1.5 px-2.5 md:px-3">
+          <span className="flex items-center gap-1.5 px-2 md:px-3">
             <Wallet className="hidden size-4 text-muted-foreground sm:block" aria-hidden />
             <span className="flex size-4 items-center justify-center rounded-full bg-emerald-500 text-[9px] font-bold text-white" aria-hidden>
               ₮
