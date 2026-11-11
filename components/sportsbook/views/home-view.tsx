@@ -14,6 +14,7 @@ import {
 import { useSportsbook } from '@/lib/sportsbook/store'
 import { CompetitionLabel, LiveBadge, LiveClock, MatchOdds, SectionHeader, SportIcon, TeamCrest } from '../shared'
 import { MatchRow } from '../match-row'
+import { MatchdayHub } from '../matchday-hub'
 
 function SearchBar() {
   const { openMatch, navigate } = useSportsbook()
@@ -324,8 +325,9 @@ export function HomeView() {
     <div className="space-y-6 md:space-y-8">
       <SearchBar />
       <SportsMenu />
-      <PromoBanner />
+      <MatchdayHub />
       <LiveNowCards />
+
       <div className="grid gap-6 2xl:grid-cols-[1.4fr_1fr]">
         <StartingSoon />
         <TopCompetitions />
